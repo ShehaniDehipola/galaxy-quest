@@ -29,9 +29,9 @@ const MarsRoverPhotos = () => {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gray-100 py-10">
+    <div className="flex flex-col items-center min-h-screen bg-gradient-to-r from-amber-200 via-blue-300 to-indigo-300 py-10">
       <ToastContainer />
-      <h1 className="text-4xl font-bold mb-4">Mars Rover Photos</h1>
+      <h1 className="text-4xl font-bold mb-4 mt-14">Mars Rover Photos</h1>
       <div className="flex flex-row items-end w-full max-w-lg p-8 rounded space-x-4">
         <div className="flex-grow">
           <label
@@ -71,7 +71,7 @@ const MarsRoverPhotos = () => {
         </div>
         <button
           onClick={handleSearch}
-          className=" bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 py-2 w-32"
+          className=" bg-blue-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500 py-2 w-32"
         >
           Search
         </button>

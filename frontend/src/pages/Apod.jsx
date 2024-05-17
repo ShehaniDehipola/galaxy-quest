@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import nasaapiInstance from "../services/NasaApiService";
-import galaxy_image_two_new from "../assets/images/galaxy_image_two_new.jpg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Apod = () => {
   const [apodData, setApodData] = useState(null);
@@ -17,6 +18,14 @@ const Apod = () => {
   }, []);
 
   const handleSearch = async () => {
+    const currentDate = new Date();
+    const selectedDate = new Date(searchDate);
+
+    if (selectedDate > currentDate) {
+      toast.error("Select a valid date.", {
+        position: "top-right",
+      });
+    }
     const searchData = await nasaapiInstance.getAstronomyPictureOfTheDay(
       searchDate
     );
@@ -25,14 +34,8 @@ const Apod = () => {
 
   console.log(apodData);
   return (
-    <div
-      className="flex flex-col items-center justify-center min-h-screen bg-gray-100 py-10"
-      style={{
-        //backgroundImage: `url(${galaxy_image_two_new})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <div className="flex flex-col items-center min-h-screen py-10 mt-14 bg-gradient-to-r from-amber-200 via-blue-300 to-indigo-300">
+      <ToastContainer position="top-right" />
       <h1 className="text-4xl font-bold mb-8">Astronomy Picture of the Day</h1>
       <div className="flex items-center space-x-4 mb-8 mt-4">
         <input
@@ -43,7 +46,7 @@ const Apod = () => {
         />
         <button
           onClick={handleSearch}
-          className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="px-4 py-2 bg-blue-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           Search
         </button>

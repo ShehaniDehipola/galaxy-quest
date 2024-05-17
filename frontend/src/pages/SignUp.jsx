@@ -43,8 +43,8 @@ export const SignUp = () => {
   };
 
   return (
-    <div className="mt-20 px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-md sm:max-w-lg lg:max-w-xl">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-amber-200 via-blue-300 to-indigo-300">
+      <div className="w-full max-w-md sm:max-w-lg lg:max-w-xl mx-auto">
         <div className="py-8 px-16 bg-slate-200 rounded-lg shadow-md">
           <h1 className="text-2xl text-center font-semibold my-7">
             Create a new account

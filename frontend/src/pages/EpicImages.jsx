@@ -35,8 +35,8 @@ const EpicImages = () => {
   console.log(epicImageData);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 py-10">
-      <h1 className="text-4xl font-bold mb-8 mt-5 text-center">EPIC Images</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-amber-200 via-blue-300 to-indigo-300 py-10">
+      <h1 className="text-4xl font-bold mb-8 mt-14 text-center">EPIC Images</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
         {error && <p className="text-red-500">{error}</p>}
         {epicImageData &&

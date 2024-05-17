@@ -48,7 +48,7 @@ export const Login = () => {
       toast.success("Login successful!", {
         position: "top-right",
       });
-      navigate("/");
+      navigate("/home");
     } catch (error) {
       dispatch(signInFailure(error.message));
       toast.error("Error logging in. Please try again.", {
@@ -58,8 +58,9 @@ export const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen px-4 sm:px-6 lg:px-8 bg-gray-100">
-      <div className="flex flex-col lg:flex-row bg-white rounded-lg shadow-md overflow-hidden max-w-4xl">
+    <div className="flex justify-center items-center h-screen px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-200 via-blue-300 to-indigo-300">
+      <ToastContainer />
+      <div className="flex flex-col lg:flex-row bg-slate-200 rounded-lg shadow-md overflow-hidden max-w-4xl">
         <div className="w-full lg:w-1/2 px-8 py-20">
           <h1 className="text-2xl text-center font-semibold mb-7">Login</h1>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
