@@ -48,7 +48,7 @@ export const Login = () => {
       toast.success("Login successful!", {
         position: "top-right",
       });
-      navigate("/home");
+      navigate("/");
     } catch (error) {
       dispatch(signInFailure(error.message));
       toast.error("Error logging in. Please try again.", {
