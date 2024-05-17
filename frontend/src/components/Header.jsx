@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className="bg-zinc-950 shadow-md py-4 px-4 fixed top-0 left-0 w-full z-10">
       <div className="flex justify-between items-center max-w-8xl mx-auto">
-        <Link to="/">
+        <Link to="/home">
           <h1 className="font-bold text-m sm:text-3xl flex flex-wrap ml-5">
             <span className="text-amber-200">Galaxy</span>
             <span className="text-sky-300">Quest</span>
