@@ -9,6 +9,7 @@ import Apod from "./pages/Apod";
 import EpicImages from "./pages/EpicImages";
 import MarsWeatherInfo from "./pages/MarsWeatherInfo";
 import MarsRoverPhotos from "./pages/MarsRoverPhotos";
+import { PrivateRoute } from "./components/PrivateRoute";
 
 export default function App() {
   return (
@@ -18,7 +19,9 @@ export default function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/sign-up" element={<SignUp />}></Route>
-        <Route path="/profile" element={<Profile />}></Route>
+        <Route element={<PrivateRoute />}>
+          <Route path="/profile" element={<Profile />}></Route>
+        </Route>
         <Route path="/apod" element={<Apod />}></Route>
         <Route path="/epic-img" element={<EpicImages />}></Route>
         <Route path="/mars-info" element={<MarsWeatherInfo />}></Route>

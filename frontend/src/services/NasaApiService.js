@@ -1,7 +1,7 @@
 import axios from "axios";
 
 class NasaApiService {
-  api_key = "iA3KhcVnlxbKpNDVQox2i1zEB4TlVoSfLEgU60Go";
+  api_key = "tRGLmjpIiT06J7D25yaB3qnCaTdO6Vgla5ORHuBU";
 
   base_url = "https://api.nasa.gov/";
 
@@ -48,13 +48,13 @@ class NasaApiService {
     }
   }
 
-  async getMarsRoverPhotos(sol, page) {
+  async getMarsRoverPhotos(sol, camera) {
     try {
       const url = `${this.base_url}mars-photos/api/v1/rovers/curiosity/photos`;
       const response = await axios.get(url, {
         params: {
           sol: sol,
-          page: page,
+          camera: camera,
           api_key: this.api_key,
         },
       });
