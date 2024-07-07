@@ -41,4 +41,4 @@ To get started with Galaxy Quest, follow these steps:
 
 ### Live Demo
 
--url: `galaxy-quest-live.vercel.app`
+-url: <a href="galaxy-quest-live.vercel.app">[galaxy-quest-live.vercel.app]</a>
